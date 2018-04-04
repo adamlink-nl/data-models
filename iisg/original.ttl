@@ -1,0 +1,24 @@
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+@prefix xsd:	<http://www.w3.org/2001/XMLSchema#> .
+
+<https://iisg.amsterdam/id/item/1000442>
+	rdf:type	<http://purl.org/dc/dcmitype/StillImage> , <https://iisg.amsterdam/vocab/Drawing> , <https://iisg.amsterdam/vocab/Print> ;
+	owl:sameAs	<http://www.worldcat.org/oclc/943932918> ;
+	<http://id.loc.gov/vocabulary/relators/drm>	<https://iisg.amsterdam/authority/person/361306> ;
+	foaf:depiction	<http://hdl.handle.net/10622/30051000808318?locatt=view:master> ;
+	<http://id.loc.gov/vocabulary/relators/col>	<https://iisg.amsterdam/authority/person/2000737> ;
+	<http://schema.org/about>	<https://iisg.amsterdam/authority/place/572941> ;
+	<http://schema.org/author>	<https://iisg.amsterdam/authority/person/361306> ;
+	<http://schema.org/inLanguage>	<http://lexvo.org/id/iso639-3/nld> ;
+	<http://schema.org/name>	"Politie... doe iets... het tocht zo in Amsterdam."@nl ;
+	<https://iisg.amsterdam/vocab/dateOfPublication>	"1981"^^xsd:gYear ;
+	<https://iisg.amsterdam/vocab/form>	<https://iisg.amsterdam/authority/form/262665> , <https://iisg.amsterdam/authority/form/269282> ;
+	<https://iisg.amsterdam/vocab/heightInCm>	33 ;
+	<https://iisg.amsterdam/vocab/manufacturer>	"De Waarheid"^^xsd:string ;
+	<https://iisg.amsterdam/vocab/period>	<https://iisg.amsterdam/authority/period/368058> ;
+	<https://iisg.amsterdam/vocab/placeOfManufacture>	"Amsterdam"^^xsd:string ;
+	<https://iisg.amsterdam/vocab/size>	"43x33 cm."^^xsd:string ;
+	<https://iisg.amsterdam/vocab/topic>	<https://iisg.amsterdam/authority/topic/133185> ;
+	<https://iisg.amsterdam/vocab/widthInCm>	43 .

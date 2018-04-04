@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<rdf:RDF
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:sa="stadsarchief.amsterdam.nl/actie/sa#"
+        xmlns:sk="stadsarchief.amsterdam.nl/kenmerken/sk#"
+        xmlns:sr="stadsarchief.amsterdam.nl/rechten/sr#"
+>
+    <rdf:Description rdf:about="B00000031354.jpg">
+        <sa:parameter name="actie">update</sa:parameter>
+        <dc:identifier>B00000031354</dc:identifier>
+        <dc:source>http://archief.amsterdam/archief/30413/146</dc:source>
+        <dc:type name="documenttype">foto</dc:type>
+        <dc:title>Buitensingel 80-101 (v.r.n.l.) buiten de Raambarrière</dc:title>
+        <dc:description>Thans Nassaukade ter hoogte van de Bloemgracht. Oorspronkelijke kabinetfoto door A.T. Rooswinkel.</dc:description>
+        <dc:provenance name="collectie">Collectie Kunsthandel Gebr. Douwes: glasnegatieven</dc:provenance>
+
+        <!-- multiple creators! (fotograaf) -> slaat alleen op de persoon, niet perse op dit cho -->
+        <dc:creator name="vervaardiger">A.T. Rooswinkel (fotograaf)</dc:creator>
+        <dc:creator name="vervaardiger">Gebroeders Douwes (uitgever)</dc:creator>
+
+        <dc:rights name="rechthebbende">Auteursrechtvrij</dc:rights>
+        <dc:date name="datering">1900 ca.</dc:date>
+        <dc:subject name="geografische naam">Buitensingel 80-101</dc:subject>
+        <sk:parameter name="documenttype">foto</sk:parameter>
+        <sk:parameter name="collectie">Collectie Kunsthandel Gebr. Douwes: glasnegatieven</sk:parameter>
+        <sk:parameter name="vervaardiger">Rooswinkel, A.T.</sk:parameter>
+        <sk:parameter name="vervaardiger">Gebroeders Douwes (uitgever)</sk:parameter>
+        <sk:parameter name="datering">19000101-19001231</sk:parameter>
+        <sk:parameter name="geografische naam"><name>Buitensingel</name><number_from>80</number_from><number_to>101</number_to></sk:parameter>
+        <sk:parameter name="geografische naam"><name>Nassaukade</name></sk:parameter>
+        <sr:parameter name="rechthebbende">Auteursrechtvrij</sr:parameter>
+        <sr:parameter name="levering">ja</sr:parameter>
+        <sr:parameter name="download of print">ja</sr:parameter>
+        <sr:parameter name="leveringsvoorwaarden"><![CDATA[-]]></sr:parameter>
+    </rdf:Description>
+</rdf:RDF>

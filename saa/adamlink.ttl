@@ -1,0 +1,22 @@
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:	<http://www.w3.org/2001/XMLSchema#> .
+@prefix dc:	<http://purl.org/dc/elements/1.1/> .
+@prefix void:	<http://rdfs.org/ns/void#> .
+
+<http://beeldbank.amsterdam.nl/afbeelding/B00000031354>
+	rdf:type	rdf:Description ;
+	dc:title	"Buitensingel 80-101 (v.r.n.l.) buiten de Raambarri\u00E8re"^^xsd:string ;
+	dc:description	"Thans Nassaukade ter hoogte van de Bloemgracht. Oorspronkelijke kabinetfoto door A.T. Rooswinkel."^^xsd:string ;
+	dc:type	"foto"^^xsd:string ;
+	<http://semanticweb.cs.vu.nl/2009/11/sem/hasBeginTimeStamp>	"1900-01-01"^^xsd:date ;
+	void:inDataset	<https://data.adamlink.nl/saa/beeldbank/> ;
+	dc:creator	"A.T. Rooswinkel (fotograaf)"^^xsd:string ;
+	dc:date	"1900 ca."^^xsd:string ;
+	dc:identifier	"B00000031354"^^xsd:string ;
+	dc:rights	"Auteursrechtvrij"^^xsd:string ;
+	dc:source	"http://archief.amsterdam/archief/30413/146"^^xsd:string ;
+	dc:subject	"Buitensingel 80-101"^^xsd:string ;
+	<http://purl.org/dc/terms/provenance>	"Collectie Kunsthandel Gebr. Douwes: glasnegatieven"^^xsd:string ;
+	<http://purl.org/dc/terms/rightsStatement>	<https://creativecommons.org/publicdomain/zero/1.0/> ;
+	<http://semanticweb.cs.vu.nl/2009/11/sem/hasEndTimeStamp>	"1900-12-31"^^xsd:date .
+

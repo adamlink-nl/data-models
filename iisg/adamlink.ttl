@@ -1,0 +1,20 @@
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:	<http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+@prefix dc:	<http://purl.org/dc/elements/1.1/> .
+@prefix void:	<http://rdfs.org/ns/void#> .
+
+#This is how it currently looks but that needs to change (obviously
+<https://iisg.amsterdam/id/item/1000442>
+	rdf:type	rdf:Description ;
+	<http://purl.org/dc/terms/spatial>	"Amsterdam. (Netherlands)"^^xsd:string ;
+	foaf:depiction	<http://hdl.handle.net/10622/30051000808318?locatt=view:level3> ;
+	dc:title	"Politie... doe iets... het tocht zo in Amsterdam."^^xsd:string ;
+	dc:type	"Drawing."^^xsd:string , "Print."^^xsd:string ;
+	<http://semanticweb.cs.vu.nl/2009/11/sem/hasBeginTimeStamp>	"1981-01-01"^^xsd:date ;
+	void:inDataset	<https://data.adamlink.nl/iisg/beeldbank/> ;
+	dc:creator	"https://iisg.amsterdam/authority/person/361306"^^xsd:string ;
+	dc:identifier	"https://iisg.amsterdam/id/item/1000442"^^xsd:string ;
+	dc:rights	"pictoright"^^xsd:string ;
+	dc:subject	"Squatters movement."^^xsd:string ;
+	<http://semanticweb.cs.vu.nl/2009/11/sem/hasEndTimeStamp>	"1981-01-01"^^xsd:date .
