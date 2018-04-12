@@ -107,7 +107,7 @@
 		<td id="street_linked"></td>
   </tr>
 	<tr>
-		<td>Gebouw (ondewerp)</td>
+		<td>Gebouw (onderwerp)</td>
 		<td id="building_count"></td>
 		<td id="building_linked"></td>
   </tr>
@@ -194,7 +194,7 @@ function doSPARQL_WriteCell(cell, q) {
 	// SPARQL query must deliver one variable with name "count"
 	var sparqlQuery = q
 	var encodedQuery = encodeURIComponent(sparqlQuery);
-	var queryUrl = 'https://api.data.adamlink.nl/datasets/AdamNet/all/services/endpoint/sparql?default-graph-uri=&query=' + encodedQuery + '&format=application%2Fsparql-results%2Bjson&timeout=0&debug=on';
+	var queryUrl = 'https://api.data.adamlink.nl/datasets/AdamNet/all/services/endpoint2/sparql?default-graph-uri=&query=' + encodedQuery + '&format=application%2Fsparql-results%2Bjson&timeout=0&debug=on';
 
 	fetch(queryUrl)
 	.then((resp) => resp.json()) // transform the data into json
@@ -279,9 +279,9 @@ fillRowTable1('saa_beeldbank', 'https://data.adamlink.nl/saa/beeldbank/')
 fillRowTable1('am_collectie', 'https://data.adamlink.nl/am/amcollect/')
 fillRowTable1('iisg_beeldbank', 'https://data.adamlink.nl/iisg/beeldbank/')
 fillRowTable1('oba_collectie', 'http://data.bibliotheken.nl/id/dataset/nbt')
-fillRowTable1('uba_beeldbank', '')
+fillRowTable1('uba_beeldbank', 'https://data.adamlink.nl/uva/beeldbank')
 fillRowTable1('rm_collectie', 'https://data.adamlink.nl/rma/beeldbank/')
-fillRowTable1('nha_beeldbank', 'https://data.adamlink.nl/nha/beeldbank/')
+fillRowTable1('nha_beeldbank', 'https://data.adamlink.nl/nharchief/beeldbank/')
 
 /////////////////////////////////
 // TABLE 2
