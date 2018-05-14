@@ -148,6 +148,7 @@
 							<th>Collectie</th>
 							<th>Foto</th>
 							<th>Prent</th>
+							<th>Tekening</th>
 							<th>Schilderij</th>
 							<th>Affiche</th>
 							<th>Boek</th>
@@ -157,6 +158,7 @@
 							<td>Beeldbank Stadsarchief</td>
 							<td id='saa_beeldbank_foto'></td>
 							<td id='saa_beeldbank_prent'></td>
+							<td id='saa_beeldbank_tekening'></td>
 							<td id='saa_beeldbank_schilderij'></td>
 							<td id='saa_beeldbank_affiche'></td>
 							<td id='saa_beeldbank_boek'></td>
@@ -166,6 +168,7 @@
 							<td>Collectie Amsterdam Museum</td>
 							<td id='am_collectie_foto'></td>
 							<td id='am_collectie_prent'></td>
+							<td id='am_collectie_tekening'></td>
 							<td id='am_collectie_schilderij'></td>
 							<td id='am_collectie_affiche'></td>
 							<td id='am_collectie_boek'></td>
@@ -175,6 +178,7 @@
 							<td>Beeldbank IISG</td>
 							<td id='iisg_beeldbank_foto'></td>
 							<td id='iisg_beeldbank_prent'></td>
+							<td id='iisg_beeldbank_tekening'></td>
 							<td id='iisg_beeldbank_schilderij'></td>
 							<td id='iisg_beeldbank_affiche'></td>
 							<td id='iisg_beeldbank_boek'></td>
@@ -184,6 +188,7 @@
 							<td>Collectie Openbare Bibliotheek Amsterdam</td>
 							<td id='oba_collectie_foto'></td>
 							<td id='oba_collectie_prent'></td>
+							<td id='oba_collectie_tekening'></td>
 							<td id='oba_collectie_schilderij'></td>
 							<td id='oba_collectie_affiche'></td>
 							<td id='oba_collectie_boek'></td>
@@ -193,6 +198,7 @@
 							<td>Kaarten Universiteitsbibliotheek UvA</td>
 							<td id='uba_maps_foto'></td>
 							<td id='uba_maps_prent'></td>
+							<td id='uba_maps_tekening'></td>
 							<td id='uba_maps_schilderij'></td>
 							<td id='uba_maps_affiche'></td>
 							<td id='uba_maps_boek'></td>
@@ -202,6 +208,7 @@
 							<td>Portretten Universiteitsbibliotheek UvA</td>
 							<td id='uba_portret_foto'></td>
 							<td id='uba_portret_prent'></td>
+							<td id='uba_portret_tekening'></td>
 							<td id='uba_portret_schilderij'></td>
 							<td id='uba_portret_affiche'></td>
 							<td id='uba_portret_boek'></td>
@@ -211,6 +218,7 @@
 							<td>Rijksmuseum</td>
 							<td id='rma_collectie_foto'></td>
 							<td id='rma_collectie_prent'></td>
+							<td id='rma_collectie_tekening'></td>
 							<td id='rma_collectie_schilderij'></td>
 							<td id='rma_collectie_affiche'></td>
 							<td id='rma_collectie_boek'></td>
@@ -220,6 +228,7 @@
 							<td>Beeldbank Noord-Hollands Archief</td>
 							<td id='nha_beeldbank_foto'></td>
 							<td id='nha_beeldbank_prent'></td>
+							<td id='nha_beeldbank_tekening'></td>
 							<td id='nha_beeldbank_schilderij'></td>
 							<td id='nha_beeldbank_affiche'></td>
 							<td id='nha_beeldbank_boek'></td>
@@ -395,12 +404,22 @@ function fillRowTable3(id, collUri) {
 	}`;
 	doSPARQL_WriteCell(cell, sparqlQuery)
 
+	var cell = id + '_tekening'
+	var sparqlQuery = `
+	PREFIX dc: <http://purl.org/dc/elements/1.1/>
+	PREFIX void: <http://rdfs.org/ns/void#>
+	SELECT COUNT(DISTINCT ?item) AS ?count WHERE {
+	  ?item dc:type <http://vocab.getty.edu/aat/300033973> .
+		?item void:inDataset <${collUri}>.
+	}`;
+	doSPARQL_WriteCell(cell, sparqlQuery)
+
 	var cell = id + '_schilderij'
 	var sparqlQuery = `
 	PREFIX dc: <http://purl.org/dc/elements/1.1/>
 	PREFIX void: <http://rdfs.org/ns/void#>
 	SELECT COUNT(DISTINCT ?item) AS ?count WHERE {
-	  ?item dc:type <http://browser.aat-ned.nl/300177435> .
+	  ?item dc:type <http://vocab.getty.edu/aat/300177435> .
 		?item void:inDataset <${collUri}>.
 	}`;
 	doSPARQL_WriteCell(cell, sparqlQuery)
@@ -410,7 +429,7 @@ function fillRowTable3(id, collUri) {
 	PREFIX dc: <http://purl.org/dc/elements/1.1/>
 	PREFIX void: <http://rdfs.org/ns/void#>
 	SELECT COUNT(DISTINCT ?item) AS ?count WHERE {
-	  ?item dc:type <> .
+	  ?item dc:type <http://vocab.getty.edu/aat/300027221> .
 		?item void:inDataset <${collUri}>.
 	}`;
 	doSPARQL_WriteCell(cell, sparqlQuery)
@@ -430,7 +449,7 @@ function fillRowTable3(id, collUri) {
 	PREFIX dc: <http://purl.org/dc/elements/1.1/>
 	PREFIX void: <http://rdfs.org/ns/void#>
 	SELECT COUNT(DISTINCT ?item) AS ?count WHERE {
-	  ?item dc:type <> .
+	  ?item dc:type <http://vocab.getty.edu/aat/300028094> .
 		?item void:inDataset <${collUri}>.
 	}`;
 	doSPARQL_WriteCell(cell, sparqlQuery)
