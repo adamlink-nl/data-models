@@ -439,7 +439,7 @@ function fillRowTable3(id, collUri) {
 	PREFIX dc: <http://purl.org/dc/elements/1.1/>
 	PREFIX void: <http://rdfs.org/ns/void#>
 	SELECT COUNT(DISTINCT ?item) AS ?count WHERE {
-	  ?item dc:type <> .
+	  ?item dc:type <http://vocab.getty.edu/aat/300028051> .
 		?item void:inDataset <${collUri}>.
 	}`;
 	doSPARQL_WriteCell(cell, sparqlQuery)
